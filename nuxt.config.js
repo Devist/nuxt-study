@@ -43,9 +43,9 @@ module.exports = {
    */
   loading: { color: '#fff' },
   /*
-   ** Global CSS
+   ** 글로벌 CSS
    */
-  css: [],
+  css: ['@/assets/sass/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
