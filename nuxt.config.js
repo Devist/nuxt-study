@@ -72,7 +72,13 @@ module.exports = {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: process.env.VUE_APP_BASE_API, // api 요청을 위한 BASE URL
+    timeout: 5000, // request timeout
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  },
   /*
    ** Build configuration
    */
@@ -82,5 +88,10 @@ module.exports = {
      */
     extend(config, ctx) {}
   },
-  srcDir: 'client/'
+  srcDir: 'client/',
+  typescript: {
+    typeCheck: {
+      eslint: true
+    }
+  }
 }

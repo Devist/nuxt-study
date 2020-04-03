@@ -1,6 +1,6 @@
 # nuxt-study
 
-> My good Nuxt.js project
+> Nuxt + Typescript + Cypress
 
 ## Build Setup
 

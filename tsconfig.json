@@ -1,3 +1,4 @@
+// https://typescript-kr.github.io/pages/tsconfig.json.html
 {
   "compilerOptions": {
     "typeRoots" : ["./client"],
