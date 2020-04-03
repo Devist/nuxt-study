@@ -12,8 +12,12 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey"
-          >GitHub</a
-        >
+          >GitHub
+        </a>
+        <div class="text-primary">
+          HELLO WOLRD
+        </div>
+        <leaflo-button />
       </div>
     </div>
   </div>

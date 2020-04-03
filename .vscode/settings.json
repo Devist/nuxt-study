@@ -4,5 +4,10 @@
     "source.fixAll.eslint": true,
     "source.fixAll": true
   },
-  "editor.renderWhitespace": "all"
+  "editor.renderWhitespace": "all",
+
+  "tsimporter.emitSemicolon": false,
+  "typescriptHero.imports.insertSemicolons": false,
+
+  "editor.foldingStrategy": "indentation",
 }

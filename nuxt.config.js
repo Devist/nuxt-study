@@ -45,11 +45,11 @@ module.exports = {
   /*
    ** 글로벌 CSS
    */
-  css: ['@/assets/sass/main.scss'],
+  css: ['@/assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/GlobalComponents.js' }],
   /*
    ** Nuxt.js dev-modules
    */

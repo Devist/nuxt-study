@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots" : ["./client"],
     "target": "es2018",
     "module": "esnext",
     "moduleResolution": "node",
@@ -12,8 +13,8 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["./client/*"],
+      "@/*": ["./client/*"]
     },
     "types": ["@types/node", "@nuxt/types"]
   },
