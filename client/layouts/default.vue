@@ -1,8 +1,21 @@
 <template>
   <div>
+    <the-navbar-horizontal color="primary" />
     <nuxt />
   </div>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+import TheNavbarHorizontal from '~/layouts/navbar/TheNavbarHorizontal.vue'
+
+@Component({
+  components: {
+    TheNavbarHorizontal
+  }
+})
+export default class Default extends Vue {}
+</script>
 
 <style>
 html {

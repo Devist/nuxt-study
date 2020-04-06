@@ -1,9 +1,13 @@
+const path = require('path')
+
 module.exports = {
   mode: 'universal', // 렌더링 모드 선택 : 'universal'(서버사이드) | 'spa' (클라이언트 사이드)
 
-  /*
+  /* *********************************************************
    ** 렌더링 된 모든 HTML 페이지의 <head> 영역 정보
-   */
+   ** https://ko.nuxtjs.org/api/pages-head
+   ** https://vue-nuxt.gitbook.io/nuxt/tutorials/making-blog/undefined - 페이지별 제목, 설명 설정
+   * *********************************************************/
   head: {
     // 페이지 제목 설정
     title: process.env.npm_package_name || '',
@@ -38,40 +42,51 @@ module.exports = {
     ]
   },
 
-  /*
-   ** Customize the progress-bar color
-   */
+  /* *********************************************************
+   ** progress-bar color 사용자 정의
+   ** https://ko.nuxtjs.org/api/configuration-loading/
+   * *********************************************************/
   loading: { color: '#fff' },
-  /*
-   ** 글로벌 CSS
-   */
-  css: ['@/assets/scss/main.scss'],
-  /*
-   ** Plugins to load before mounting the App
-   */
+
+  /* **************************************
+   ** 글로벌 CSS 정의
+   * **************************************/
+  css: ['~/tailwind.min.css'],
+
+  /* *********************************************************
+   ** 앱을 마운팅하기 전에 load할 플러그인 모음
+   * *********************************************************/
   plugins: [{ src: '~/plugins/GlobalComponents.js' }],
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  /* *********************************************************
+   ** Nuxt.js dev-modules (개발시, 또는 최초 빌드시에만 필요한 모듈)
+   ** https://nuxtjs.org/api/configuration-modules/#-code-buildmodules-code-
+   * *********************************************************/
   buildModules: [
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
-  /*
-   ** Nuxt.js modules
-   */
+
+  /* *********************************************************
+   ** Nuxt.js modules (런타임에도 이용되는 모듈)
+   ** https://nuxtjs.org/api/configuration-modules/
+   * *********************************************************/
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources'
   ],
-  /*
+
+  styleResources: { sass: ['@/assets/scss/main.scss'] },
+
+  /* *********************************************************
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
-   */
+   * *********************************************************/
   axios: {
     baseURL: process.env.VUE_APP_BASE_API, // api 요청을 위한 BASE URL
     timeout: 5000, // request timeout
@@ -79,15 +94,20 @@ module.exports = {
       'Content-Type': 'application/json'
     }
   },
-  /*
+
+  /* *********************************************************
    ** Build configuration
-   */
+   ** https://ko.nuxtjs.org/api/configuration-build/#build-프로퍼티
+   * *********************************************************/
   build: {
-    /*
-     ** You can extend webpack config here
-     */
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './client/tailwind.config.js')
+      }
+    },
     extend(config, ctx) {}
   },
+
   srcDir: 'client/',
   typescript: {
     typeCheck: {
