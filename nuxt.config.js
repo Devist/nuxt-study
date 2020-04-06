@@ -51,7 +51,7 @@ module.exports = {
   /* **************************************
    ** 글로벌 CSS 정의
    * **************************************/
-  css: ['~/tailwind.min.css'],
+  css: ['~/assets/scss/main.scss'],
 
   /* *********************************************************
    ** 앱을 마운팅하기 전에 load할 플러그인 모음
@@ -77,11 +77,8 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/dotenv'
   ],
-
-  styleResources: { sass: ['@/assets/scss/main.scss'] },
 
   /* *********************************************************
    ** Axios module configuration

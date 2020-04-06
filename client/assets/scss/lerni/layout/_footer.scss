@@ -1,12 +1,26 @@
 /*=========================================================================================
-  File Name: _theNavbar.scss
-  Description: 네비게이션 스타일을 정의합니다.
+  File Name: _footer.scss
+  Description: Footer 스타일을 정의합니다
   ----------------------------------------------------------------------------------------
   Author: 정보기술연구소 솔루션연구팀 LERNI members
   Author URL: https://lerni.kr
 ==========================================================================================*/
 
-.lerni-navbar-horizontal{
-    width:100%;
-    height:55px;
+.footer-sticky {
+  .the-footer {
+    position: fixed;
+    background: $white;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+    z-index: 40000;
+  }
+}
+.footer-hidden {
+  .the-footer {
+    display: none;
+  }
+}
+.the-footer {
+  padding: 1rem 2.2rem;
 }

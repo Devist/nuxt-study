@@ -1,10 +1,10 @@
-/*
+/**
  ** TailwindCSS Configuration File
- **
  ** Docs: https://tailwindcss.com/docs/configuration
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
+  important: true,
   theme: {
     colors: {
       transparent: 'transparent',
@@ -20,7 +20,7 @@ module.exports = {
         700: '#2b6cb0'
       }
     }
-    /*
+    /**
     |-----------------------------------------------------------------------------
     | Text colors                         https://tailwindcss.com/docs/text-color
     |-----------------------------------------------------------------------------
@@ -34,7 +34,7 @@ module.exports = {
     */
     // textColor: (theme) => theme('colors'),
 
-    /*
+    /**
    |-----------------------------------------------------------------------------
    | Background colors             https://tailwindcss.com/docs/background-color
    |-----------------------------------------------------------------------------

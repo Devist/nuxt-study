@@ -17,7 +17,7 @@
         <div class="text-primary">
           HELLO WOLRD
         </div>
-        <leaflo-button />
+        <lerni-button />
       </div>
     </div>
   </div>

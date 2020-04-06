@@ -6,8 +6,12 @@
   Author URL: https://lerni.kr
 ==========================================================================================*/
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
-@import "lerni/layout";
+@import "./lerni/variables";
+
+@import "./lerni/layout/theNavbar";
+@import "./lerni/layout/layoutModern";
+@import "./lerni/layout/footer";

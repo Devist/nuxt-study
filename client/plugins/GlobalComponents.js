@@ -1,5 +1,5 @@
 import Vue from 'vue'
 
-import LeafloButton from '~/components/UI/buttons/LeafloButton'
+import LerniButton from '~/components/UI/buttons/LerniButton'
 
-Vue.component('LeafloButton', LeafloButton)
+Vue.component('LeafloButton', LerniButton)

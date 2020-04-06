@@ -2,16 +2,19 @@
   <div>
     <the-navbar-horizontal color="primary" />
     <nuxt />
+    <the-footer mode="sticky" />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import TheNavbarHorizontal from '~/layouts/navbar/TheNavbarHorizontal.vue'
+import TheFooter from '~/layouts/footer/TheFooter.vue'
 
 @Component({
   components: {
-    TheNavbarHorizontal
+    TheNavbarHorizontal,
+    TheFooter
   }
 })
 export default class Default extends Vue {}
