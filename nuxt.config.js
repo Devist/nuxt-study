@@ -56,7 +56,7 @@ module.exports = {
   /* *********************************************************
    ** 앱을 마운팅하기 전에 load할 플러그인 모음
    * *********************************************************/
-  plugins: [{ src: '~/plugins/GlobalComponents.js' }],
+  plugins: ['~/plugins/GlobalComponents', '~/plugins/axios'],
 
   /* *********************************************************
    ** Nuxt.js dev-modules (개발시, 또는 최초 빌드시에만 필요한 모듈)
@@ -85,11 +85,12 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    * *********************************************************/
   axios: {
-    baseURL: process.env.VUE_APP_BASE_API, // api 요청을 위한 BASE URL
-    timeout: 5000, // request timeout
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    baseURL: 'https://jsonplaceholder.typicode.com/'
+    // baseURL: process.env.VUE_APP_BASE_API, // api 요청을 위한 BASE URL
+    // timeout: 5000, // request timeout
+    // headers: {
+    //   'Content-Type': 'application/json'
+    // }
   },
 
   /* *********************************************************

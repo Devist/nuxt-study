@@ -10,4 +10,8 @@
   "typescriptHero.imports.insertSemicolons": false,
 
   "editor.foldingStrategy": "indentation",
+
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
 }

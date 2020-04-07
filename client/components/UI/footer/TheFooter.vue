@@ -30,24 +30,29 @@
         <!-- 개인정보 처리방침 -->
         |
         <a
+          v-if="urls.privacyPolicy"
           class="font-bold"
-          href="https://lerni.kr/%ea%b0%9c%ec%9d%b8%ec%a0%95%eb%b3%b4-%ec%b2%98%eb%a6%ac%eb%b0%a9%ec%b9%a8/"
+          :href="urls.privacyPolicy"
           target="_blank"
           rel="nofollow"
-          >개인정보 처리방침</a
+          >개인정보 처리방침 |
+        </a>
+
+        <a
+          v-if="urls.introduce"
+          :href="urls.introduce"
+          target="_blank"
+          rel="nofollow"
+          >러니소개 |</a
         >
-        |
-        <a href="https://lerni.kr/features/" target="_blank" rel="nofollow"
-          >러니소개</a
-        >
-        |
+
         <a
           href="https://lerni.kr/%eb%89%b4%ec%8a%a4%eb%a0%88%ed%84%b0/"
           target="_blank"
           rel="nofollow"
-          >공지사항</a
+          >공지사항 |</a
         >
-        |
+
         <a href="https://lerni.kr/faqs/" target="_blank" rel="nofollow">FAQ</a>
       </span>
       <span class="md:flex hidden items-center">
@@ -75,6 +80,13 @@ export default class Default extends Vue {
 
   @Prop(String)
   private mode!: string | undefined
+
+  @Prop(String)
+  private urls: object = {
+    privacyPolicy: '', // 개인정보 처리방침
+    termsOfService: '', // 이용약관,
+    introduce: '' // 소개페이지
+  }
 
   // data
   footerColor: string = this.color ? 'bg-' + this.color : 'bg-primary'

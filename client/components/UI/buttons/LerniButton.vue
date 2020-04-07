@@ -23,10 +23,32 @@
     Author URL: https://lerni.kr
 ========================================================================================== -->
 <template>
-  <button class="btn btn-blue">
-    Button
+  <button class="btn" :class="buttonColor" v-on="listeners">
+    <slot />
   </button>
 </template>
+
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component({
+  components: {}
+})
+export default class LerniButton extends Vue {
+  @Prop(String)
+  private to!: string | undefined
+
+  @Prop(String)
+  private color!: string | undefined
+
+  // data
+  buttonColor: string = this.color ? 'bg-' + this.color : 'bg-primary'
+
+  // computed
+
+  // methods
+}
+</script>
 
 <style lang="scss" scoped>
 .btn {

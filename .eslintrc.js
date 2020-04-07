@@ -4,6 +4,9 @@ module.exports = {
     browser: true,
     node: true
   },
+  globals: {
+    $postRepository:false
+  },
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'prettier',

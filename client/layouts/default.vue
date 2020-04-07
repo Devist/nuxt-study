@@ -2,14 +2,14 @@
   <div>
     <the-navbar-horizontal color="primary" />
     <nuxt />
-    <the-footer mode="sticky" />
+    <the-footer mode="sticky" :urls="urlList" />
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import TheNavbarHorizontal from '~/layouts/navbar/TheNavbarHorizontal.vue'
-import TheFooter from '~/layouts/footer/TheFooter.vue'
+import TheNavbarHorizontal from '~/components/UI/navbar/TheNavbarHorizontal.vue'
+import TheFooter from '~/components/UI/footer/TheFooter.vue'
 
 @Component({
   components: {
@@ -17,7 +17,17 @@ import TheFooter from '~/layouts/footer/TheFooter.vue'
     TheFooter
   }
 })
-export default class Default extends Vue {}
+export default class Default extends Vue {
+  /**
+   * DATA
+   */
+
+  private urlList: object = {
+    privacyPolicy: 'https://google.com', // 개인정보 처리방침
+    termsOfService: 'https://google.com', // 이용약관,
+    introduce: 'https://lerni.kr' // 소개페이지
+  }
+}
 </script>
 
 <style>

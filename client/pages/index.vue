@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <logo />
       <h1 class="title">nuxt-study</h1>
       <h2 class="subtitle">My good Nuxt.js project</h2>
       <div class="links">
@@ -17,7 +16,9 @@
         <div class="text-primary">
           HELLO WOLRD
         </div>
-        <lerni-button />
+        <lerni-button color="grey-light">
+          <nuxt-link to="/user/login">로그인페이지로 이동</nuxt-link>
+        </lerni-button>
       </div>
     </div>
   </div>
@@ -25,12 +26,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
 
 export default Vue.extend({
-  components: {
-    Logo
-  }
+  components: {}
 })
 </script>
 
