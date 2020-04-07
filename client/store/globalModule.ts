@@ -1,4 +1,4 @@
-import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 
 @Module({
   name: 'globalModule',
@@ -11,5 +11,10 @@ export default class GlobalModule extends VuexModule {
   @Mutation
   public UPDATE_WINDOW_WIDTH(windowWidth: number) {
     this.windowWidth = windowWidth
+  }
+
+  @Action
+  public TEST_ACTION() {
+    console.log('테스트에유')
   }
 }
