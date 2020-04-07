@@ -10,6 +10,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 import TheNavbarHorizontal from '~/components/UI/navbar/TheNavbarHorizontal.vue'
 import TheFooter from '~/components/UI/footer/TheFooter.vue'
+import { globalStore } from '@/store'
 
 @Component({
   components: {
@@ -26,6 +27,20 @@ export default class Default extends Vue {
     privacyPolicy: 'https://google.com', // 개인정보 처리방침
     termsOfService: 'https://google.com', // 이용약관,
     introduce: 'https://lerni.kr' // 소개페이지
+  }
+
+  private mounted() {
+    // width값 globalStore에 세팅
+    window.addEventListener('resize', this.handleWindowResize)
+    globalStore.UPDATE_WINDOW_WIDTH(window.innerWidth)
+  }
+
+  private beforeDestroy() {
+    window.removeEventListener('resize', this.handleWindowResize)
+  }
+
+  private handleWindowResize(event: any) {
+    globalStore.UPDATE_WINDOW_WIDTH(event.currentTarget.innerWidth)
   }
 }
 </script>
