@@ -35,11 +35,9 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
   components: {}
 })
 export default class LerniButton extends Vue {
-  /** Description for propA */
   @Prop(String)
   private to!: string | undefined
 
-  /** Description for propA */
   @Prop(String)
   private color!: string | undefined
 
