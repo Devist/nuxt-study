@@ -5,5 +5,5 @@
   "pluginsFile": "client/test/cypress/plugins/index.js",
   "screenshotsFolder": "client/test/cypress/screenshots",
   "supportFile": "client/test/cypress/support/index.js",
-  "videosFolder": "test/cypress/videos"
+  "videosFolder": "client/test/cypress/videos"
 }
