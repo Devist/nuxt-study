@@ -16,7 +16,7 @@
         <div class="text-primary">
           HELLO WOLRD
         </div>
-        <lerni-button color="grey-light">
+        <lerni-button color="primary">
           <nuxt-link to="/user/login">로그인페이지로 이동</nuxt-link>
         </lerni-button>
       </div>

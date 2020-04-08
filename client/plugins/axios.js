@@ -20,6 +20,6 @@ export default (ctx, inject) => {
     }
   })
 
-  const postRepositoryWithAxios = postRepository(ctx.$axios)
-  inject('postRepository', postRepositoryWithAxios('/posts'))
+  // const postRepositoryWithAxios = postRepository(ctx.$axios)
+  // inject('postRepository', postRepositoryWithAxios('/posts'))
 }

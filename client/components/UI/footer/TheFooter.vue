@@ -58,11 +58,11 @@
       <span class="md:flex hidden items-center">
         <span>Made with</span>
         <span class="ml-1">LERNI</span>
-        <feather-icon
+        <!-- <feather-icon
           icon="HeartIcon"
           svg-classes="stroke-current text-danger w-6 h-6"
           class="ml-1"
-        />
+        /> -->
       </span>
     </div>
   </div>
@@ -81,7 +81,7 @@ export default class Default extends Vue {
   @Prop(String)
   private mode!: string | undefined
 
-  @Prop(String)
+  @Prop(Object)
   private urls: object = {
     privacyPolicy: '', // 개인정보 처리방침
     termsOfService: '', // 이용약관,
