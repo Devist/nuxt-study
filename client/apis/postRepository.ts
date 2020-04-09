@@ -1,21 +1,21 @@
-// export default ($axios) => (resource: string) => ({
-//   index() {
-//     return $axios.$get(`${resource}`)
-//   },
+export default ($axios: any) => (resource: string) => ({
+  index() {
+    return $axios.$get(`${resource}`)
+  },
 
-//   show(id) {
-//     return $axios.$get(`${resource}/${id}`)
-//   },
+  show(id: any) {
+    return $axios.$get(`${resource}/${id}`)
+  },
 
-//   create(payload) {
-//     return $axios.$post(`${resource}`, payload)
-//   },
+  create(payload: any) {
+    return $axios.$post(`${resource}`, payload)
+  },
 
-//   update(id, payload) {
-//     return $axios.$post(`${resource}/${id}`, payload)
-//   },
+  update(id: any, payload: any) {
+    return $axios.$post(`${resource}/${id}`, payload)
+  },
 
-//   delete(id) {
-//     return $axios.$delete(`${resource}/${id}`)
-//   }
-// })
+  delete(id: any) {
+    return $axios.$delete(`${resource}/${id}`)
+  }
+})

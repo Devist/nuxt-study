@@ -7,7 +7,7 @@
         alt="Sunset in the mountains"
       />
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{ event }}</div>
+        <div class="font-bold text-xl mb-2">테스트</div>
         <p class="text-gray-700 text-base">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
           quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
@@ -29,6 +29,10 @@
         >
       </div>
     </div>
+    <iframe
+      class="w-1/2"
+      src="https://leaflo.ldcc.co.kr:4001/?apiKey=95c7278a-7097-4a77-abc5-dc6c386ae67a&userId=%EC%82%AC%EC%9A%A9%EC%9E%90_%EC%95%84%EC%9D%B4%EB%94%94&accessKey=2ca51446-b9d4-4488-904c-65463a371f21&accessSecret=c1ba71bb-8dc5-4e4a-940c-79e7f572ad69"
+    ></iframe>
   </div>
 </template>
 
