@@ -56,7 +56,11 @@ module.exports = {
   /* *********************************************************
    ** 앱을 마운팅하기 전에 load할 플러그인 모음
    * *********************************************************/
-  plugins: ['~/plugins/GlobalComponents', '~/plugins/axios'],
+  plugins: [
+    '@/plugins/combined-inject',
+    '@/plugins/GlobalComponents',
+    '@/plugins/axios'
+  ],
 
   /* *********************************************************
    ** Nuxt.js dev-modules (개발시, 또는 최초 빌드시에만 필요한 모듈)
@@ -67,7 +71,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss'
   ],
-
+  router: {
+    middleware: 'logger'
+  },
   /* *********************************************************
    ** Nuxt.js modules (런타임에도 이용되는 모듈)
    ** https://nuxtjs.org/api/configuration-modules/

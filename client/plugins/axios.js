@@ -1,5 +1,6 @@
 import https from 'https'
 import postRepository from '~/apis/postRepository'
+import eventRepository from '~/apis/eventRepository'
 
 export default (ctx, inject) => {
   //  개발기일 때 SSL 이슈 해결 방안
@@ -19,7 +20,8 @@ export default (ctx, inject) => {
       redirect('/400')
     }
   })
-
+  const eventRepositoryWithAxios = eventRepository(ctx.$axios)
   const postRepositoryWithAxios = postRepository(ctx.$axios)
   inject('postRepository', postRepositoryWithAxios('/posts'))
+  inject('eventRepository', eventRepositoryWithAxios())
 }

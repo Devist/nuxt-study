@@ -33,8 +33,6 @@ export default class Default extends Vue {
     // width값 globalStore에 세팅
     window.addEventListener('resize', this.handleWindowResize)
     globalStore.UPDATE_WINDOW_WIDTH(window.innerWidth)
-    // 테스트 액션
-    globalStore.TEST_ACTION()
   }
 
   private beforeDestroy() {
