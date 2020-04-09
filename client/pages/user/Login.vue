@@ -65,18 +65,18 @@ import { Vue, Component, Prop } from 'nuxt-property-decorator'
   components: {},
   layout: 'full'
 })
-export default class Navbar extends Vue {
+export default class Login extends Vue {
   @Prop(String)
-  private color!: string | undefined
+  private readonly color!: string | undefined
 
   // data
   navbarColor: string = this.color ? 'bg-' + this.color : 'bg-primary'
 
   // computed
 
-  get exclamationMarks(): string {
-    return Array(this.enthusiasm + 1).join('!')
-  }
+  // get exclamationMarks(): string {
+  //   return Array(this.enthusiasm + 1).join('!')
+  // }
 
   // methods
 

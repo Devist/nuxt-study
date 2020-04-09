@@ -38,14 +38,14 @@ export default class Axios extends Vue {
   }
 
   async createPost() {
-    const result = await this.$postRepository.create({
-      title: 'foo',
-      body: 'bar',
-      userId: 1
-    })
-    console.log(result)
+    // const result = await this.$postRepository.create({
+    //   title: 'foo',
+    //   body: 'bar',
+    //   userId: 1
+    // })
+    // console.log(result)
     // Fix ids to be unique
-    this.posts.push({ ...result, id: Number(this.posts.slice(-1)[0].id) + 1 })
+    // this.posts.push({ ...result, id: Number(this.posts.slice(-1)[0].id) + 1 })
   }
 }
 </script>

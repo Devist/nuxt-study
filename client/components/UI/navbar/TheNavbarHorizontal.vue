@@ -27,24 +27,6 @@ export default class Navbar extends Vue {
 
   // data
   navbarColor: string = this.color ? 'bg-' + this.color : 'bg-primary'
-
-  // computed
-
-  get exclamationMarks(): string {
-    return Array(this.enthusiasm + 1).join('!')
-  }
-
-  // methods
-
-  increment(): void {
-    this.enthusiasm++
-  }
-
-  decrement(): void {
-    if (this.enthusiasm > 1) {
-      this.enthusiasm--
-    }
-  }
 }
 </script>
 
