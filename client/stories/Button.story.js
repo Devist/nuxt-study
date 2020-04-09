@@ -2,29 +2,33 @@ import { storiesOf } from '@storybook/vue'
 
 // import ButtonReadme from '../components/UI/buttons/README.md'
 import ButtonUsage from '../components/UI/buttons/USAGE.md'
-import MyButton from '../components/UI/buttons/LerniButton.vue'
+import LerniButton from '../components/UI/buttons/LerniButton.vue'
 
-storiesOf('Button', module)
+storiesOf('Style Guide/UI/Buttons', module)
   .addParameters({
     readme: {
       content: ButtonUsage,
       sidebar: `<!-- PROPS -->`
     }
   })
-  .add('Button', () => {
+  .add('Button Color', () => {
     return {
       components: {
-        MyButton
+        LerniButton
       },
-      template: `<my-button>My Button</my-button>`
+      template: `<div>
+      <lerni-button>Primary</lerni-button>
+      <lerni-button color="grey-500">grey</lerni-button>
+      </div>
+      `
     }
   })
 
   .add('Success Button', () => {
     return {
       components: {
-        MyButton
+        LerniButton
       },
-      template: `<my-button variant="success">My Button</my-button>`
+      template: `<lerni-button variant="success">My Button</lerni-button>`
     }
   })

@@ -14,7 +14,7 @@ storiesOf('Guide', module)
     },
     {
       readme: {
-        content: CodeStyleGuide
+        content: IntroduceGuide
       }
     }
   )
@@ -30,7 +30,40 @@ storiesOf('Guide', module)
     }
   )
   .add(
-    '3. Code Style',
+    '3. Project structure',
+    () => {
+      return {}
+    },
+    {
+      readme: {
+        content: CodeStyleGuide
+      }
+    }
+  )
+  .add(
+    '4. Code Style',
+    () => {
+      return {}
+    },
+    {
+      readme: {
+        content: CodeStyleGuide
+      }
+    }
+  )
+  .add(
+    '4. How to use Store',
+    () => {
+      return {}
+    },
+    {
+      readme: {
+        content: CodeStyleGuide
+      }
+    }
+  )
+  .add(
+    '5. How to communicate server ',
     () => {
       return {}
     },
