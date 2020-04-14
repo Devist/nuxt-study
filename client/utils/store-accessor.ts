@@ -1,13 +1,17 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/no-mutable-exports */
 
 import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
-import mymodule from '~/store/modules/mymodule'
+import globalModule from '@/store/globalModule'
+import testModule from '@/store/testModule'
 
-let myModuleStore: mymodule
+let globalStore: globalModule
+let testStore: testModule
 
 function initialiseStores(store: Store<any>): void {
-  myModuleStore = getModule(mymodule, store)
+  globalStore = getModule(globalModule, store)
+  testStore = getModule(testModule, store)
 }
 
-export { initialiseStores, myModuleStore }
+export { initialiseStores, globalStore, testStore }

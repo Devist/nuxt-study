@@ -28,7 +28,6 @@
         >
 
         <!-- 개인정보 처리방침 -->
-        |
         <a
           v-if="urls.privacyPolicy"
           class="font-bold"
@@ -69,7 +68,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
 
 @Component({
   components: {}
@@ -81,12 +80,14 @@ export default class Default extends Vue {
   @Prop(String)
   private mode!: string | undefined
 
-  @Prop(Object)
-  private urls: object = {
-    privacyPolicy: '', // 개인정보 처리방침
-    termsOfService: '', // 이용약관,
-    introduce: '' // 소개페이지
-  }
+  @Prop({
+    default: {
+      privacyPolicy: '', // 개인정보 처리방침
+      termsOfService: '', // 이용약관,
+      introduce: '' // 소개페이지
+    }
+  })
+  private urls!: object
 
   // data
   footerColor: string = this.color ? 'bg-' + this.color : 'bg-primary'
