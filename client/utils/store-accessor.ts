@@ -3,8 +3,8 @@
 
 import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
-import globalModule from '@/store/globalModule'
-import testModule from '@/store/testModule'
+import globalModule from '~/store/global-module'
+import testModule from '~/store/test-module'
 
 let globalStore: globalModule
 let testStore: testModule

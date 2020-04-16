@@ -1,6 +1,6 @@
 import https from 'https'
-import postRepository from '~/apis/postRepository'
-import eventRepository from '~/apis/eventRepository'
+import postRepository from '~/apis/post-repository'
+import eventRepository from '~/apis/event-repository'
 
 export default (ctx, inject) => {
   //  개발기일 때 SSL 이슈 해결 방안

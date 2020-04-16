@@ -58,7 +58,7 @@ module.exports = {
    * *********************************************************/
   plugins: [
     '@/plugins/combined-inject',
-    '@/plugins/GlobalComponents',
+    '@/plugins/global-components',
     '@/plugins/axios'
   ],
 
